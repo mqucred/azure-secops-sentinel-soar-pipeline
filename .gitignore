@@ -1,0 +1,7 @@
+private/
+*.cap
+*.rtf
+*.pem
+*.key
+.DS_Store
+Thumbs.db
