@@ -65,13 +65,15 @@ flowchart TD
 
 The diagram below illustrates the active Azure Resource Group (`rg-secops-prod-01`) topology exported via Azure Resource Visualizer, highlighting key solution bindings and API connection dependencies:
 
-![](../azure-secops-sentinel-soar-pipeline/00-architecture-resource-visualizer.png)
+<img width="6325" height="2155" alt="00-architecture-resource-visualizer" src="https://github.com/user-attachments/assets/8b2de343-8511-405a-9cf7-05ef76a67dbc" />
+
 
 ---
 
 ## Enterprise Governance & Hierarchy
 
-![](../azure-secops-sentinel-soar-pipeline/00-phase1-caf-mg-placement.png)
+<img width="1773" height="782" alt="00-phase1-caf-mg-placement" src="https://github.com/user-attachments/assets/ac67738a-c17e-414e-aff7-a2ec6e3da791" />
+
 
 - **CAF Alignment:** Demonstrates enterprise governance by housing centralized operational resources under the dedicated `mg-management` hierarchy under the Platform root.
 - **Policy & Governance Scope:** Ensures broad security monitoring policies and Azure Policy assignments applied to the Management group naturally cover `sub-ent-platform-prod`.
