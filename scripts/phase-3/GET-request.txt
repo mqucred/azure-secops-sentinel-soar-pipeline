@@ -1,0 +1,10 @@
+# Construct the ARM REST endpoint for Microsoft Sentinel Alert Rules
+$Endpoint = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroup/providers/Microsoft.OperationalInsights/workspaces/$WorkspaceName/providers/Microsoft.SecurityInsights/alertRules?api-version=2023-02-01-preview"
+
+# Invoke the REST method against the Azure management plane
+$Response = Invoke-AzRestMethod -Path $Endpoint -Method GET
+
+
+# Parse and extract display names to verify rules
+$Rules = ($Response.Content | ConvertFrom-Json).value
+$Rules | Select-Object Name, @{Name="DisplayName";Expression={$_.properties.displayName}}

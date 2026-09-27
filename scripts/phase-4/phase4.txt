@@ -1,0 +1,5 @@
+3. Logic App Run History Verification Expression (triggerBody()?['object']?['id'])
+While no new CLI commands were required for Phase 5 execution, this was the exact runtime binding evaluated successfully by the Logic App execution engine in 2.01 seconds to parse the incoming webhook body from live incident #9:
+
+Plaintext
+triggerBody()?['object']?['id']

@@ -1,0 +1,39 @@
+2. KQL Query 1: Activity Log Telemetry Ingestion Check
+Used in Log Analytics (law-secops-prod-01) to confirm that diag-secops-activity-logs is actively streaming control plane events from sub-ent-platform-prod:
+
+Code snippet
+AzureActivity
+| where TimeGenerated > ago(24h)
+| summarize EventCount = count() by CategoryValue, ResourceGroup, ActivityStatusValue
+| order by EventCount desc
+
+
+
+
+3. KQL Query 2: Scheduled Analytic Rule Detection Logic
+The KQL query embedded inside the Sentinel Scheduled Analytic Rule to detect administrative and role assignment modifications:
+
+Code snippet
+AzureActivity
+| where TimeGenerated > ago(1h)
+| where ActivityStatusValue in~ ("Success", "Succeeded")
+| where OperationNameValue has "Microsoft.Resources/subscriptions/write" 
+   or OperationNameValue has "Microsoft.Authorization/roleAssignments/write"
+| project TimeGenerated, 
+          SubscriptionId, 
+          ResourceGroup, 
+          Caller, 
+          OperationNameValue, 
+          ActivityStatusValue
+
+
+
+
+4. KQL Query 3: Verify Sentinel Incident Creation & Automation Execution
+Used to verify that the Analytic Rule triggered an incident and that Sentinel logged the execution:
+
+Code snippet
+SecurityIncident
+| where TimeGenerated > ago(24h)
+| project TimeGenerated, IncidentNumber, Title, Severity, Status, Owner, RelatedAnalyticRuleIds
+| order by TimeGenerated desc
