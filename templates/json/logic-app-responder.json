@@ -1,0 +1,78 @@
+{
+    "headers": {
+        "Accept-Encoding": "gzip,deflate",
+        "Host": "prod-86.eastus.logic.azure.com",
+        "Max-Forwards": "10",
+        "baggage": "x-ms-forward-internal-correlation-id = 32d568db530a90d5417ec06fc4f0265d, ActionType = RunPlaybook, IncidentName = 63883bf7-5be1-42f4-809a-0417943b837b, TriggersWhen = Created, TriggersOn = Incidents, UniqueResourceId = Incidents_63883bf7-5be1-42f4-809a-0417943b837b, AutomationRuleName = 742235af-9ad7-4a11-84aa-972b522bb4ea, WorkspaceId = 5459abf0-b03a-4279-9add-03ba03e3edaf, AutomationEventId = 827e9d32-7e32-4178-a9e3-41bf0377ff45, MessageId = 9d5cec33-736d-453e-a3e0-6c568183bfb8, SessionId = 5459abf0-b03a-4279-9add-03ba03e3edaf_63883bf7-5be1-42f4-809a-0417943b837b, SessionId = 5459abf0-b03a-4279-9add-03ba03e3edaf_63883bf7-5be1-42f4-809a-0417943b837b, ReaderId = 33",
+        "traceparent": "00-32d568db530a90d5417ec06fc4f0265d-baad9761d68520e2-01",
+        "x-ms-client-tracking-id": "5459abf0-b03a-4279-9add-03ba03e3edaf_9",
+        "x-ms-client-keywords": "{\"SentinelAutomationDepth\":\"0\"}",
+        "x-ms-forward-internal-correlation-id": "32d568db530a90d5417ec06fc4f0265d",
+        "X-ARR-LOG-ID": "91ae9db7-e003-4000-8013-a48f268aab50",
+        "CLIENT-IP": "20.232.92.128:44968",
+        "DISGUISED-HOST": "prod-86.eastus.logic.azure.com",
+        "X-SITE-DEPLOYMENT-ID": "flowfe-prod-bl-rp00-app-02__e48c",
+        "WAS-DEFAULT-HOSTNAME": "flowfe-prod-bl-rp00-app-02.flow-prod-bl-rp00-ase-02.p.azurewebsites.net",
+        "X-Forwarded-Proto": "https",
+        "X-AppService-Proto": "https",
+        "X-ARR-SSL": "2048|256|CN=Microsoft TLS G2 RSA CA OCSP 04, O=Microsoft Corporation, C=US|CN=eastus.logic.azure.com, O=Microsoft Corporation, L=Redmond, S=WA, C=US",
+        "X-Forwarded-TlsVersion": "1.3",
+        "X-Forwarded-For": "20.232.92.128:44968",
+        "X-Original-URL": "/workflows/03d66fb4c2ba444197ac5cbf40a1df47/triggers/Microsoft_Sentinel_incident/paths/invoke?api-version=2019-05-01&sp=%2ftriggers%2fMicrosoft_Sentinel_incident%2frun&sv=1.0&sig=REDACTED",
+        "X-WAWS-Unencoded-URL": "/workflows/03d66fb4c2ba444197ac5cbf40a1df47/triggers/Microsoft_Sentinel_incident/paths/invoke?api-version=2019-05-01&sp=%2ftriggers%2fMicrosoft_Sentinel_incident%2frun&sv=1.0&sig=REDACTED",
+        "X-Azure-JA4-Fingerprint": "t13d111200_d3731e0d3936_708ec0eef9a9",
+        "Content-Length": "1735",
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+        "eventUniqueId": "44b92408-7a21-4811-bc0e-78ec50da00c9",
+        "objectSchemaType": "Incident",
+        "objectEventType": "Create",
+        "workspaceInfo": {
+            "SubscriptionId": "SUB_ID",
+            "ResourceGroupName": "rg-secops-prod-01",
+            "WorkspaceName": "law-secops-prod-01"
+        },
+        "workspaceId": "5459abf0-b03a-4279-9add-03ba03e3edaf",
+        "object": {
+            "id": "/subscriptions/SUB_ID/resourceGroups/rg-secops-prod-01/providers/Microsoft.OperationalInsights/workspaces/law-secops-prod-01/providers/Microsoft.SecurityInsights/Incidents/63883bf7-5be1-42f4-809a-0417943b837b",
+            "name": "63883bf7-5be1-42f4-809a-0417943b837b",
+            "etag": "\"dc0206ec-0000-0100-0000-6a906cf20000\"",
+            "type": "Microsoft.SecurityInsights/Incidents",
+            "properties": {
+                "title": "dummm5",
+                "description": "please run meere bhai x2",
+                "severity": "High",
+                "status": "New",
+                "owner": {
+                    "objectId": null,
+                    "email": null,
+                    "assignedTo": null,
+                    "userPrincipalName": null
+                },
+                "labels": [],
+                "firstActivityTimeUtc": "2026-08-27T16:59:31.496Z",
+                "lastActivityTimeUtc": "2026-08-27T16:59:31.496Z",
+                "lastModifiedTimeUtc": "2026-08-27T16:59:30.3109456Z",
+                "createdTimeUtc": "2026-08-27T16:59:30.3109456Z",
+                "incidentNumber": 9,
+                "additionalData": {
+                    "alertsCount": 0,
+                    "bookmarksCount": 0,
+                    "commentsCount": 0,
+                    "alertProductNames": [],
+                    "tactics": [],
+                    "techniques": []
+                },
+                "relatedAnalyticRuleIds": [],
+                "incidentUrl": "https://portal.azure.com/#asset/Microsoft_Azure_Security_Insights/Incident/subscriptions/SUB_ID/resourceGroups/rg-secops-prod-01/providers/Microsoft.OperationalInsights/workspaces/law-secops-prod-01/providers/Microsoft.SecurityInsights/Incidents/63883bf7-5be1-42f4-809a-0417943b837b",
+                "providerName": "Azure Sentinel",
+                "providerIncidentId": "9",
+                "alerts": [],
+                "bookmarks": [],
+                "relatedEntities": [],
+                "comments": []
+            }
+        }
+    }
+}
